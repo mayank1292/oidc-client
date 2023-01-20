@@ -1,0 +1,25 @@
+<html xmlns:th="https://thymeleaf.org">    
+
+<head>
+	 <style>
+         table, th, td {
+            border: 1px solid black;
+         }
+         
+      </style>
+</head>
+<body>
+	<br><br><br><br>
+	<table>
+	<tr>
+		<td><b>Parameter name</b></td>
+		<td><b>Parameter value</b></td>
+	</tr>
+	    <tr th:each="element : ${requestparams}">
+	        <td th:text="${element.key}">Param name</td>
+	        <td th:text="${element.value}">Param value</td>
+	    </tr>
+</table>
+</body>
+
+</html>
